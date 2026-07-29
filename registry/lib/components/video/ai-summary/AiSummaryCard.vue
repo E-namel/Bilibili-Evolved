@@ -175,6 +175,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   width: 375px;
+  max-height: 50dvh;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -206,7 +207,8 @@ export default defineComponent({
   }
 
   .be-ai-summary-body {
-    max-height: 50vh;
+    // 整卡 max-height 生效后由 flex 收缩, min-height: 0 允许收缩出滚动条
+    min-height: 0;
     overflow: auto;
     padding: 8px 8px 6px;
 
